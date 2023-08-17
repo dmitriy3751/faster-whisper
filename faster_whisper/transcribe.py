@@ -267,8 +267,8 @@ class WhisperModel:
                 format_timestamp(duration - (audio.shape[0] / sampling_rate)),
             )
 
-            if self.logger.isEnabledFor(logging.DEBUG):
-                self.logger.debug(
+            if self.logger.isEnabledFor(logging.INFO):
+                self.logger.info(
                     "VAD filter kept the following audio segments: %s",
                     ", ".join(
                         "[%s -> %s]"
